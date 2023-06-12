@@ -1,4 +1,3 @@
-from screeninfo import get_monitors
 import pyautogui
 from PIL import Image
 from pytesseract import *
@@ -23,12 +22,7 @@ def sanitize(text):
     text = text.strip()
     return text
 
-for m in get_monitors():
-    if(m.is_primary==True):
-        monitor = m
 
-width = monitor.width
-height = monitor.height
 
 def findText():
     numScreen = pyautogui.screenshot(region=(640,936,3170-640,1322-936))
